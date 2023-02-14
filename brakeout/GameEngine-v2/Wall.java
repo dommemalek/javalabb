@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
+import java.awt.geom.Rectangle2D;
 
 public class Wall extends Sprite {
 
@@ -11,21 +12,13 @@ public class Wall extends Sprite {
 
 	@Override
 	public void update(Keyboard keyboard) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void draw(Graphics2D graphics) {
-		// TODO Auto-generated method stub
-		graphics.setColor(Color.pink);
-		graphics.fillRect(getX(), getY(), getWidth(), getHeight());
+		graphics.setColor(Color.BLACK);
+		graphics.fillRect(this.getX(), this.getY(), this.getWidth(), this.getHeight());
 	}
-	
-	public Rectangle getBounds() {
-		return new Rectangle(getX(), getY(), getWidth(),getHeight());
-	}
-
-	
 
 }

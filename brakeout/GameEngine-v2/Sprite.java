@@ -1,7 +1,10 @@
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 
 public abstract class Sprite {
-	private int x, y, width, height;
+	private int x, y;
+	protected int width;
+	private int height;
 	public int getX() { return this.x; }
 	public int getY() { return this.y; }
 	public int getWidth() { return this.width; }

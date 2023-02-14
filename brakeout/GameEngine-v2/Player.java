@@ -13,18 +13,11 @@ public class Player extends Sprite {
 	
 	public Player(int x, int y, int width, int height) {
 		super(x, y, 80, 10);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void update(Keyboard keyboard) {
-		// TODO Auto-generated method stub
-		/*if(keyboard.isKeyDown(Key.Down)) {
-			setY(getY()+3);
-		}
-		if(keyboard.isKeyDown(Key.Up)) {
-			setY(getY()-3);
-		}*/
+
 		if(keyboard.isKeyDown(Key.Left)){
 			setX(getX()-8);
 			leftkeydown = true;
@@ -50,18 +43,9 @@ public class Player extends Sprite {
 
 	@Override
 	public void draw(Graphics2D graphics) {
-		// TODO Auto-generated method stub
 		graphics.setColor(Color.blue);
 		graphics.fillRect(getX(), getY(), getWidth(), getHeight());
 	}
-	
-	public Rectangle2D getBounds() {
-		return new Rectangle2D.Double(getX(),getY(), getWidth(), getHeight());
-	}
-	
-	
-	
-	
 	
 	
 	public static boolean isLeftKeyDown() {
@@ -71,8 +55,5 @@ public class Player extends Sprite {
 	public static boolean isRightKeyDown() {
 	    return rightkeydown;
 	}
-	
-	
-
 
 }
