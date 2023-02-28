@@ -12,7 +12,7 @@ public class Player extends Sprite{
 	
 	private int DX;
 	
-	public Player(double x, double y, double width, double height) {
+	public Player(int x, int y, int width, int height) {
 		super(x, y, width, height);
 		// TODO Auto-generated constructor stub
 		INIT_PLAYER();
@@ -23,23 +23,22 @@ public class Player extends Sprite{
 	}
 	private void RESET_STATE() {
 		x = IWorld.INIT_PADDLEX;
-		y = IWorld.INIT_PADDELY;
+		y = IWorld.INIT_PADDLEY;
 		}
 	void MOVE() {
 		x += DX;
 		if(x <= 0) {
 			x = 0;
 		}
-		if(x >= IWorld.WORLD_WIDTH) {
-			x = IWorld.WORLD_WIDTH;
+		if(x+IWorld.PADDEL_WIDTH >= IWorld.WORLD_WIDTH) {
+			x = IWorld.WORLD_WIDTH-IWorld.PADDEL_WIDTH;
 		}
 	}
-	
 	public void KEY(Keyboard keyboard) {
 		
 		
 		if(keyboard.isKeyDown(Key.Left)){
-			setX(getX()-1);
+			setX(getX()-6);
 			DX = -1;
 			leftkeydown = true;
 			
@@ -51,7 +50,7 @@ public class Player extends Sprite{
 		}
 		
 		if(keyboard.isKeyDown(Key.Right)){
-			setX(getX()+1);
+			setX(getX()+6);
 			DX = 1;
 			rightkeydown = true;
 			
@@ -64,7 +63,13 @@ public class Player extends Sprite{
 		
 	}
 		
-	
+	public static boolean isLeftKeyDown() {
+	    return leftkeydown;
+	}
+
+	public static boolean isRightKeyDown() {
+	    return rightkeydown;
+	}
 	
 	
 }

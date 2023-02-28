@@ -4,12 +4,12 @@ public class Brick extends Sprite {
 
 	private boolean DESTROYED;
 	
-	public Brick(double x, double y, double width, double height) {
+	public Brick(int x, int y, int width, int height) {
 		super(x, y, width, height);
 		INIT_BRICK(x, y, width, height);
 	}
 	
-	private void INIT_BRICK(double x, double y, double width, double height) {
+	private void INIT_BRICK(int x, int y, int width, int height) {
 		this.x = x;
 		this.y = y;
 		this.width = width;

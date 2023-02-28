@@ -3,7 +3,7 @@ import javax.swing.*;
 
 public class Ball extends Sprite{
 
-	public Ball(double x, double y, double width, double height) {
+	public Ball(int x, int y, int width, int height) {
 		super(x, y, width, height);
 		INIT_BALL();
 	}
@@ -12,8 +12,8 @@ public class Ball extends Sprite{
 	
 	
 	private void INIT_BALL() {
-	XDIR = 1;
-	YDIR = -1;
+	XDIR = 3;
+	YDIR = -3;
 	RESET_STATE();
 	}
 	
@@ -51,9 +51,9 @@ public class Ball extends Sprite{
 		if(y == 0) {
 			setYDIR(1);
 		}
-		if(y == IWorld.WORLD_HEIGHT) {
-			setYDIR(-1);
-		}
+		//if(y == IWorld.WORLD_HEIGHT) {
+		//	setYDIR(-1);
+		//}
 }
    
 

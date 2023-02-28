@@ -3,43 +3,43 @@ import java.awt.Rectangle;
 import java.awt.geom.Rectangle2D;
 
 public abstract class Sprite {
-	protected double x;
-	protected double y;
-	protected double width;
-	protected double height;
-	public double getX() { 
+	protected int x;
+	protected int y;
+	protected int width;
+	protected int height;
+	public int getX() { 
 		return this.x; 
 		}
 	
-	public double getY() { 
+	public int getY() { 
 		return this.y; 
 		}
 	
-	public double getWidth() { 
+	public int getWidth() { 
 		return this.width; 
 		}
 	
-	public double getHeight() { 
+	public int getHeight() { 
 		return this.height; 
 		}
 	
-	public void setX(double x) { 
+	public void setX(int x) { 
 		this.x = x; 
 		};
 		
-	public void setY(double y) { 
+	public void setY(int y) { 
 		this.y = y; 
 		};
 		
-	public void setWidth(double width) { 
+	public void setWidth(int width) { 
 		this.width = width; 
 		};
 		
-	public void setHeight(double height) { 
+	public void setHeight(int height) { 
 		this.height = height; 
 		};
 		
-	public Sprite(double x, double y, double width, double height) {
+	public Sprite(int x, int y, int width, int height) {
 		this.x = x;
 		this.y = y;
 		this.width = width;
